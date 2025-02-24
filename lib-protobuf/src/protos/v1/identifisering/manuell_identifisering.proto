@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package v1.identifisering.manuell_identifisering;
+
+import "protos/v1/person/generell_person.proto";
+import "protos/v1/virksomhet/organisasjon.proto";
+
+message ManuellIdentifisering {
+    optional v1.person.generell_person.GenerellPerson person = 1;
+    optional v1.virksomhet.organisasjon.Organisasjon organisasjon = 2;
+    string timestamp = 3;
+    string utfort_av = 4;
+}

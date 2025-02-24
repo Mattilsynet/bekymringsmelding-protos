@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package v1.identifisering.maskin_identifisering;
+
+import "protos/v1/person/generell_person.proto";
+import "protos/v1/virksomhet/organisasjon.proto";
+
+message MaskinIdentifisering {
+    repeated v1.person.generell_person.GenerellPerson personer = 1;
+    repeated v1.virksomhet.organisasjon.Organisasjon organisasjoner = 2;
+    string timestamp = 3;
+}

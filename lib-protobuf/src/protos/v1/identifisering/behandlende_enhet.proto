@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package v1.identifisering.behandlende_enhet;
+
+
+message BehandlendeEnhet {
+    string enhet = 1;
+    string timestamp = 2;
+    string utfort_av = 3;
+}

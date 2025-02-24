@@ -5,6 +5,7 @@ pub enum EventType {
     RodtkjottVurdering,
     MaskinIdentifisering,
     ManuellIdentifisering,
+    BehandlendeEnhet,
     Maskinvurdering,
     Inspeksjon,
     Telefonsamtale,
@@ -24,6 +25,7 @@ const RODTKJOTT_STR: &str = "no.mattilsynet.lib-schemas.protos.Rodtkjott";
 const RODTKJOTT_VURDERING_STR: &str = "no.mattilsynet.lib-schemas.protos.Vurdering";
 const MASKIN_IDENTIFISERING_STR: &str = "no.mattilsynet.lib-schemas.protos.MaskinIdentifisering";
 const MANUELL_IDENTIFISERING_STR: &str = "no.mattilsynet.lib-schemas.protos.ManuellIdentifisering";
+const BEHANDLENDE_ENHET_STR: &str = "no.mattilsynet.lib-schemas.protos.BehandlendeEnhet";
 const MASKINVURDERING_STR: &str = "no.mattilsynet.lib-schemas.protos.Maskinvurdering";
 const INSPEKSJON_STR: &str = "no.mattilsynet.lib-schemas.protos.Inspeksjon";
 const TELEFONSAMTALE_STR: &str = "no.mattilsynet.lib-schemas.protos.Telefonsamtale";
@@ -48,6 +50,7 @@ impl EventTypeTrait for EventType {
             EventType::RodtkjottVurdering => RODTKJOTT_VURDERING_STR,
             EventType::MaskinIdentifisering => MASKIN_IDENTIFISERING_STR,
             EventType::ManuellIdentifisering => MANUELL_IDENTIFISERING_STR,
+            EventType::BehandlendeEnhet => BEHANDLENDE_ENHET_STR,
             EventType::Maskinvurdering => MASKINVURDERING_STR,
             EventType::Inspeksjon => INSPEKSJON_STR,
             EventType::Telefonsamtale => TELEFONSAMTALE_STR,
@@ -72,6 +75,7 @@ impl From<&str> for EventType {
             RODTKJOTT_VURDERING_STR => EventType::RodtkjottVurdering,
             MASKIN_IDENTIFISERING_STR => EventType::MaskinIdentifisering,
             MANUELL_IDENTIFISERING_STR => EventType::ManuellIdentifisering,
+            BEHANDLENDE_ENHET_STR => EventType::BehandlendeEnhet,
             MASKINVURDERING_STR => EventType::Maskinvurdering,
             INSPEKSJON_STR => EventType::Inspeksjon,
             TELEFONSAMTALE_STR => EventType::Telefonsamtale,
@@ -96,6 +100,7 @@ impl fmt::Display for EventType {
             EventType::RodtkjottVurdering => RODTKJOTT_VURDERING_STR,
             EventType::MaskinIdentifisering => MASKIN_IDENTIFISERING_STR,
             EventType::ManuellIdentifisering => MANUELL_IDENTIFISERING_STR,
+            EventType::BehandlendeEnhet => BEHANDLENDE_ENHET_STR,
             EventType::Maskinvurdering => MASKINVURDERING_STR,
             EventType::Inspeksjon => INSPEKSJON_STR,
             EventType::Telefonsamtale => TELEFONSAMTALE_STR,

@@ -10,6 +10,9 @@ pub mod v1 {
     }
 
     pub mod virksomhet {
+        pub mod organisasjon {
+            include!(concat!(env!("OUT_DIR"), "/v1.virksomhet.organisasjon.rs"));
+        }
         pub mod tilsynsobjekt {
             include!(concat!(env!("OUT_DIR"), "/v1.virksomhet.tilsynsobjekt.rs"));
         }
@@ -26,6 +29,30 @@ pub mod v1 {
         include!(concat!(env!("OUT_DIR"), "/v1.publikum.rs"));
     }
 
+    pub mod identifisering {
+
+        include!(concat!(env!("OUT_DIR"), "/v1.identifisering.rs"));
+
+        pub mod behandlende_enhet {
+            include!(concat!(
+            env!("OUT_DIR"),
+            "/v1.identifisering.behandlende_enhet.rs"
+            ));
+        }
+        pub mod maskin_identifisering {
+            include!(concat!(
+            env!("OUT_DIR"),
+            "/v1.identifisering.maskin_identifisering.rs"
+            ));
+        }
+        pub mod manuell_identifisering {
+            include!(concat!(
+            env!("OUT_DIR"),
+            "/v1.identifisering.manuell_identifisering.rs"
+            ));
+        }
+    }
+
     pub mod vurdering {
         pub mod maskinvurdering {
             include!(concat!(env!("OUT_DIR"), "/v1.vurdering.maskinvurdering.rs"));
@@ -37,10 +64,6 @@ pub mod v1 {
                 "/v1.vurdering.manuell_vurdering.rs"
             ));
         }
-    }
-
-    pub mod identifisering {
-        include!(concat!(env!("OUT_DIR"), "/v1.identifisering.rs"));
     }
 
     pub mod oppfolging {

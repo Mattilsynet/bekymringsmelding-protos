@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package v1.person.generell_person;
+
+message GenerellPerson {
+    optional string fnr = 1;
+    optional string fornavn = 2;
+    optional string etternavn = 3;
+    optional string adresse = 4;
+    optional string postnr = 5;
+    optional string poststed = 6;
+}

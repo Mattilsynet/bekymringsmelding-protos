@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package v1.virksomhet.organisasjon;
+
+message Organisasjon {
+    optional string orgnr = 1;
+    optional string adresse = 2;
+    optional string postnr = 3;
+    optional string poststed = 4;
+    optional string organisasjonsnavn = 5;
+}
