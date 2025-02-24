@@ -33,8 +33,8 @@ pub mod v1 {
 
         pub mod manuell_vurdering {
             include!(concat!(
-            env!("OUT_DIR"),
-            "/v1.vurdering.manuell_vurdering.rs"
+                env!("OUT_DIR"),
+                "/v1.vurdering.manuell_vurdering.rs"
             ));
         }
     }
