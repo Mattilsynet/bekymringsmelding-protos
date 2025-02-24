@@ -13,4 +13,5 @@ enum Alvorlighesgrad {
   LAV = 1;
   MIDDELS = 2;
   HOY = 3;
+  IKKE_RELEVANT = 4;
 }
