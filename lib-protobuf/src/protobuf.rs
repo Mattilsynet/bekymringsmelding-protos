@@ -7,6 +7,10 @@ pub mod v1 {
         pub mod ansatt {
             include!(concat!(env!("OUT_DIR"), "/v1.person.ansatt.rs"));
         }
+
+        pub mod generell_person {
+            include!(concat!(env!("OUT_DIR"), "/v1.person.generell_person.rs"));
+        }
     }
 
     pub mod virksomhet {
@@ -31,24 +35,26 @@ pub mod v1 {
 
     pub mod identifisering {
 
-        include!(concat!(env!("OUT_DIR"), "/v1.identifisering.rs"));
+        pub mod identifisering {
+            include!(concat!(env!("OUT_DIR"), "/v1.identifisering.rs"));
+        }
 
         pub mod behandlende_enhet {
             include!(concat!(
-            env!("OUT_DIR"),
-            "/v1.identifisering.behandlende_enhet.rs"
+                env!("OUT_DIR"),
+                "/v1.identifisering.behandlende_enhet.rs"
             ));
         }
         pub mod maskin_identifisering {
             include!(concat!(
-            env!("OUT_DIR"),
-            "/v1.identifisering.maskin_identifisering.rs"
+                env!("OUT_DIR"),
+                "/v1.identifisering.maskin_identifisering.rs"
             ));
         }
         pub mod manuell_identifisering {
             include!(concat!(
-            env!("OUT_DIR"),
-            "/v1.identifisering.manuell_identifisering.rs"
+                env!("OUT_DIR"),
+                "/v1.identifisering.manuell_identifisering.rs"
             ));
         }
     }
