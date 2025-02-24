@@ -1,5 +1,6 @@
+use bytes::Bytes;
 use prost::Message;
-use std::io::Cursor;
+pub use prost::{DecodeError, EncodeError};
 
 pub fn serialize<T: Message>(message: T) -> Vec<u8> {
     let mut buf = Vec::with_capacity(message.encoded_len());
@@ -8,5 +9,6 @@ pub fn serialize<T: Message>(message: T) -> Vec<u8> {
 }
 
 pub fn deserialize<T: Message + Default>(buf: &[u8]) -> Result<T, prost::DecodeError> {
-    T::decode(&mut Cursor::new(buf))
+    let bytes = Bytes::copy_from_slice(buf);
+    T::decode(bytes)
 }
