@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package v1.hvittkjott;
+
+import "protos/v1/person/ansatt.proto";
+import "protos/v1/virksomhet/slakteri.proto";
+import "protos/v2/virksomhet/tilsynsobjekt.proto";
+
+
+message Hvittkjott {
+  optional v1.person.ansatt.Ansatt avsender = 1;
+  string begrunnelse_for_bekymring = 2;
+  optional v1.virksomhet.slakteri.Slakteri slakteri = 3;
+  v2.virksomhet.tilsynsobjekt.Tilsynsobjekt tilsynsobjekt = 4;
+}
+

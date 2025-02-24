@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package v2.virksomhet.tilsynsobjekt;
+
+message Tilsynsobjekt {
+  Adresse adresse = 1;
+  string mt_enhet = 2;
+  string orgnr = 3;
+  string produsentnummer = 4;
+  string tilsynsobjekt_id = 5;
+  optional string tilsynsobjekt_navn = 6;
+  optional string virksomhetsnavn = 7;
+}
+
+message Adresse {
+  optional string gateadresse = 1;
+  optional string postnummer = 2;
+  optional string poststed = 3;
+}

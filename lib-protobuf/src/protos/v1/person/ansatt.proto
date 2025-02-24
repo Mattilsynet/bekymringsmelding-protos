@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package v1.person.ansatt;
+
+message Ansatt {
+  optional string avdeling_id = 1;
+  optional string avsender_epost = 2;
+  string brukernavn = 3;
+  string navn = 4;
+  optional string region_id = 5;
+  optional string tittel = 6;
+}

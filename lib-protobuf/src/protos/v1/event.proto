@@ -1,0 +1,12 @@
+syntax = "proto3";
+package v1.event;
+
+message Event {
+  string id = 1;
+  string ty = 2;
+  string specversion = 3;
+  string data_content_type = 4;
+  bytes data = 5;
+  string source = 6;
+  string time = 7;
+}

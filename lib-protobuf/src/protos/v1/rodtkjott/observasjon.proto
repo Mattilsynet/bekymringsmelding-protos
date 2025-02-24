@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package v1.rodtkjott;
+
+message Observasjon {
+  message Diagnose {
+    optional string beskrivelse = 1;
+  }
+
+  optional string beskrivelse = 1;
+  repeated string bilde_ids = 2;
+  optional Diagnose diagnose = 3;
+}

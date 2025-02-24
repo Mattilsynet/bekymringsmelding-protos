@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package v2.rodtkjott;
+
+import "protos/v1/person/ansatt.proto";
+import "protos/v2/rodtkjott/funn.proto";
+import "protos/v1/virksomhet/slakteri.proto";
+import "protos/v2/virksomhet/tilsynsobjekt.proto";
+
+enum Kategori {
+  KATEGORI_UNSPECIFIED = 0;
+  DYREVELFERD = 1;
+  MERKEAVVIK_DYR = 2;
+}
+
+message Rodtkjott {
+  optional v1.person.ansatt.Ansatt avsender = 1;
+  string begrunnelse_for_bekymring = 2;
+  repeated v2.rodtkjott.Funn funn = 3;
+  repeated Kategori kategorier = 4;
+  optional v1.virksomhet.slakteri.Slakteri slakteri = 6;
+  v2.virksomhet.tilsynsobjekt.Tilsynsobjekt tilsynsobjekt = 7;
+  string innsendt = 13; //Timestamp, UTC
+}
+

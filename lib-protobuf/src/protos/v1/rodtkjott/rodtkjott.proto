@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package v1.rodtkjott;
+
+import "protos/v1/person/ansatt.proto";
+import "protos/v1/rodtkjott/funn.proto";
+import "protos/v1/virksomhet/slakteri.proto";
+import "protos/v1/virksomhet/tilsynsobjekt.proto";
+
+enum Kategori {
+  KATEGORI_UNSPECIFIED = 0;
+  DYREVELFERD = 1;
+  MERKEAVVIK_DYR = 2;
+}
+
+message Rodtkjott {
+  string aktivitet_id = 2;
+  optional v1.person.ansatt.Ansatt avsender = 3;
+  string begrunnelse_for_bekymring = 4;
+  repeated v1.rodtkjott.Funn funn = 5;
+  repeated Kategori kategorier = 6;
+  optional string mottaker_id = 7;
+  optional string saksnummer = 8;
+  string sist_redigert = 9;
+  string sist_redigert_av = 10;
+  optional v1.virksomhet.slakteri.Slakteri slakteri = 11;
+  v1.virksomhet.tilsynsobjekt.Tilsynsobjekt tilsynsobjekt = 12;
+}
+
+message Vurdering {
+  optional string fordelt_til = 1;
+  string sist_redigert = 2;
+  Status status = 3;
+  optional StatusBegrunnelse status_begrunnelse = 4;
+  optional string tilknyttet_saksnummer = 5;
+}
+
+enum Status {
+  STATUS_UNSPECIFIED = 0;
+  NY = 1;
+  UNDER_VURDERING = 2;
+  VURDERT = 3;
+  DUBLETT = 4;
+  INSPEKSJON = 5;
+  SAKSBEHANDLING = 6;
+  UTKAST = 7;
+  SENERE_OPPFOLGING = 8;
+}
+
+enum StatusBegrunnelse {
+  STATUS_BEGRUNNELSE_UNSPECIFIED = 0;
+  UNDER_ENDRING = 1;
+  GJENNOMFORT = 2;
+  INGEN_BEKYMRING = 3;
+  RESSURSMANGEL = 4;
+  SESONGBETONT_PROBLEMSTILLING = 5;
+  MIDLERTIDIG_RESSURSMANGEL = 6;
+}

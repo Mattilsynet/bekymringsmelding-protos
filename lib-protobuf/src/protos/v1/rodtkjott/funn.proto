@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package v1.rodtkjott;
+
+import "protos/v1/rodtkjott/observasjon.proto";
+
+message Funn {
+  enum Type {
+    TYPE_UNSPECIFIED = 0;
+    AM = 1;
+    PM = 2;
+  }
+
+  repeated string bilde_ids = 1;
+  string funn_id = 2;
+  repeated v1.rodtkjott.Observasjon observasjon = 3;
+  Type funn_type = 4;
+  string kontroll_dato = 5;
+}

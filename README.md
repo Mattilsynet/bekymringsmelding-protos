@@ -2,10 +2,10 @@
 Protobuf definisjoner for bekymringsmeldinger
 
 ## Hvordan ta ibruk
-For og ta ibruk bibliotek her så må du legge til følgende linje i [dependecies] Cargo.toml filen din:
+For og ta ibruk protos i Rust må du legge til følgende linje i [dependecies] Cargo.toml filen din:
 ```toml
 # Erstatt "pakkenavn" med navnet du vil gi pakken i prosjektet ditt
-pakkenavn = { git = "ssh://git@github.com/Mattilsynet/bekymringsmelding-libs" }
+pakkenavn = { git = "ssh://git@github.com/Mattilsynet/bekymringsmelding-protos" }
 ```
 pakkenavn er navnet du vil gi pakken i ditt prosjekt, freks protobuf.
 
