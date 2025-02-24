@@ -7,7 +7,6 @@ pub mod v1 {
         pub mod ansatt {
             include!(concat!(env!("OUT_DIR"), "/v1.person.ansatt.rs"));
         }
-
         pub mod generell_person {
             include!(concat!(env!("OUT_DIR"), "/v1.person.generell_person.rs"));
         }
@@ -68,6 +67,19 @@ pub mod v1 {
             include!(concat!(
                 env!("OUT_DIR"),
                 "/v1.vurdering.manuell_vurdering.rs"
+            ));
+        }
+    }
+
+    pub mod arkivering {
+        pub mod arkiv_job {
+            include!(concat!(env!("OUT_DIR"), "/v1.arkivering.arkiv_job.rs"));
+        }
+
+        pub mod arkivering_status {
+            include!(concat!(
+            env!("OUT_DIR"),
+            "/v1.arkivering.arkivering_status.rs"
             ));
         }
     }

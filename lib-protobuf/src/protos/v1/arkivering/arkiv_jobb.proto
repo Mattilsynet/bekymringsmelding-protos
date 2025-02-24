@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package v1.arkivering.arkiv_job;
+
+message ArkivJob {
+  string bekymringsmelding_id = 1;
+  optional string jounralpost_id = 2;
+  string saksaar = 3;
+  string sekvensnummer = 4;
+}
+
+message ArkivJobBilder {
+  string bekymringsmelding_id = 1;
+  string bilde_id = 2;
+  string beskrivelse = 3;
+  optional string jounralpost_id = 4;
+  string saksaar = 5;
+  string sekvensnummer = 6;
+}

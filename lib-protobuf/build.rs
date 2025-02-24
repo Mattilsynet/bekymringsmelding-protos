@@ -20,6 +20,8 @@ fn main() -> Result<()> {
             "src/protos/v1/publikum/publikum.proto",
             "src/protos/v1/vurdering/maskinvurdering.proto",
             "src/protos/v1/vurdering/manuell_vurdering.proto",
+            "src/protos/v1/arkivering/arkivering_status.proto",
+            "src/protos/v1/arkivering/arkiv_jobb.proto",
             "src/protos/v2/virksomhet/tilsynsobjekt.proto",
             "src/protos/v2/rodtkjott/funn.proto",
             "src/protos/v2/rodtkjott/rodtkjott.proto",

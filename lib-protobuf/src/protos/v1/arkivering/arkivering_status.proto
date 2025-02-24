@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package v1.arkivering.arkivering_status;
+
+message ArkiveringStatus {
+  string bekymringsmelding_id = 1;
+  string saksaar = 2;
+  string sekvensnummer = 3;
+  string status = 4;
+}
