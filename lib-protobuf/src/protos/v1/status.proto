@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package v1.status;
+
+message Avsluttet {
+  string timestamp = 1;
+  string utfort_av = 2;
+  AvsluttetType avsluttet_type = 3;
+}
+
+enum AvsluttetType {
+  UNSPECIFIED = 0;
+  IKKE_ALVORLIG_TILFELLE = 1;
+  MELDING_OM_SAMME_TILFELLE = 2;
+  PAGAENDE_ELLER_NYLIG_GJENNOMFORT_OPPFOLGING = 3;
+  MANGELFULL_ELLER_FEIL_NAVN_ELLER_STED = 4;
+  MANGELFULL_INFORMASJON_OM_TILFELLE = 5;
+  MANGEL_PAA_RESSURSER = 6;
+  IKKE_VAART_FORVALTNINGSOMRADE = 7;
+  AVSLUTTET_MED_INSPEKSJON = 8;
+  AVSLUTTET_AV_SYSTEM = 9;
+}
+
+message TilVurdering {
+  string timestamp = 1;
+  string utfort_av = 2;
+}
+
+message TilOppfolging {
+  string timestamp = 1;
+  string utfort_av = 2;
+}

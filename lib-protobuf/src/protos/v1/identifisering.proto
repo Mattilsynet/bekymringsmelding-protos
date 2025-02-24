@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package v1.identifisering;
+
+message Identifisering {
+    repeated Person person = 1;
+    repeated Organisasjon organisasjon = 2;
+}
+
+message Person {
+    string fnr = 1;
+    string fornavn = 2;
+    string etternavn = 3;
+    string adresse = 4;
+    string postnr = 5;
+    string poststed = 6;
+    string telefon = 7;
+    string epost = 8;
+}
+
+message Organisasjon {
+    string orgnr = 1;
+    string adresse = 2;
+    string postnr = 3;
+    string poststed = 4;
+    string organisasjonsnavn = 5;
+    string aktivitet = 6;
+    repeated Person kontaktperson = 7;
+}

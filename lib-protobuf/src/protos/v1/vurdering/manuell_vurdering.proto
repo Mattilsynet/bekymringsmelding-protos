@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package v1.vurdering.manuell_vurdering;
+
+message ManuellVurdering {
+  string timestamp = 1;
+  string utfort_av = 2;
+  Alvorlighesgrad alvorlighesgrad = 3;
+}
+
+enum Alvorlighesgrad {
+  UNSPECIFIED = 0;
+  LAV = 1;
+  MIDDELS = 2;
+  HOY = 3;
+}

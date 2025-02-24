@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package v1.vurdering.maskinvurdering;
+
+
+message Maskinvurdering {
+  optional float vurdering = 1;
+  optional string metadata = 2;
+  string timestamp = 3;
+  string model = 4;
+}
+
