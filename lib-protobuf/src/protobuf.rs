@@ -78,8 +78,8 @@ pub mod v1 {
 
         pub mod arkivering_status {
             include!(concat!(
-            env!("OUT_DIR"),
-            "/v1.arkivering.arkivering_status.rs"
+                env!("OUT_DIR"),
+                "/v1.arkivering.arkivering_status.rs"
             ));
         }
     }
