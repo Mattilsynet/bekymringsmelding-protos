@@ -17,7 +17,7 @@ impl From<Avsender> for protobuf::v1::person::ansatt::Ansatt {
     fn from(value: Avsender) -> Self {
         Self {
             avdeling_id: value.avdeling_id,
-            avsender_epost: Some(String::default()),
+            epost: Some(String::default()),
             brukernavn: value.brukernavn,
             navn: value.navn,
             region_id: value.region_id,

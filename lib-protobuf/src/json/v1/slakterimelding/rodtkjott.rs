@@ -43,7 +43,7 @@ impl From<Rodtkjott> for protobuf::v1::rodtkjott::Rodtkjott {
             aktivitet_id: value.aktivitet_id.unwrap_or_default(),
             avsender: value.avsender.map(|a| {
                 let mut avsender = Ansatt::from(a);
-                avsender.avsender_epost = value.avsender_epost;
+                avsender.epost = value.avsender_epost;
                 avsender
             }),
             begrunnelse_for_bekymring: value.begrunnelse,
