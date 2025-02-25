@@ -3,6 +3,12 @@ syntax = "proto3";
 package v1.oppfolging;
 
 message Inspeksjon {
+  enum Rolle {
+    UNSPECIFIED = 0;
+    INSPEKTOR = 1;
+    DYREVERNNEMNDA = 2;
+  }
+
   string id = 1;
   string utfort_dato = 2;
   string timestamp = 3;
@@ -11,6 +17,7 @@ message Inspeksjon {
   string saksnummer = 6;
   string tilsynskvittering_id = 7;
   bool deleted = 8;
+  Rolle inspeksjon_gjennomfort_av = 9;
 }
 
 message Telefonsamtale {
