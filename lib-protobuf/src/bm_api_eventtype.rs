@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Debug, PartialEq, Deserialize, Serialize, Clone)]
 #[serde(rename_all = "kebab-case")]
 pub enum BmApiEventType {
     AdminJobRepopulateDb,

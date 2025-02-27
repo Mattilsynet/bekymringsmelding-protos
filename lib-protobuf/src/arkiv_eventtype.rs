@@ -1,6 +1,7 @@
 use crate::eventtype::EventTypeTrait;
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Deserialize, Serialize, Clone)]
 pub enum ArkivEventType {
     RodtkjottAnkommet,
     RodtkjottAvsluttet,

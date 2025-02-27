@@ -1,5 +1,7 @@
+use serde::{Deserialize, Serialize};
 use std::fmt;
-#[derive(Debug, Clone, PartialEq)]
+
+#[derive(Debug, PartialEq, Deserialize, Serialize, Clone)]
 pub enum EventType {
     Rodtkjott,
     RodtkjottVurdering,
