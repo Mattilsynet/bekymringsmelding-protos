@@ -12,7 +12,8 @@ pub enum ArkivEventType {
     ArkivJobbBilderJournalpost,
     ArkivJobbSettSaksansvarlig,
     Unsupported(String),
-    ArkivJobbAvskriv
+    ArkivJobbAvskriv,
+    BekymringsmeldingAvsluttet,
 }
 
 const RODKJOTT_ANKOMMET: &str = "no.mattilsynet.lib-schemas.protos.Rodtkjott.Ankommet";
@@ -28,6 +29,8 @@ const ARKIVJOBB_BILDE_JOURNALPOST: &str =
     "no.mattilsynet.lib-schemas.protos.ArkivJobbBildeJournalpost";
 const ARKIVJOBB_SETT_SAKSANSVARLIG: &str =
     "no.mattilsynet.lib-schemas.protos.ArkivJobbSettSaksansvarlig";
+const BEKYMRINGSMELDING_AVSLUTTET: &str = "no.mattilsynet.lib-schemas.protos.Avsluttet";
+
 
 impl EventTypeTrait for ArkivEventType {
     fn as_str(&self) -> &str {
@@ -42,6 +45,7 @@ impl EventTypeTrait for ArkivEventType {
             ArkivEventType::ArkivJobbAvskriv => ARKIVJOBB_AVSKRIV,
             ArkivEventType::ArkivJobbBilderJournalpost => ARKIVJOBB_BILDE_JOURNALPOST,
             ArkivEventType::ArkivJobbSettSaksansvarlig => ARKIVJOBB_SETT_SAKSANSVARLIG,
+            ArkivEventType::BekymringsmeldingAvsluttet => BEKYMRINGSMELDING_AVSLUTTET,
             ArkivEventType::Unsupported(_) => "Unsupported",
         }
     }
@@ -60,6 +64,7 @@ impl From<&str> for ArkivEventType {
             ARKIVJOBB_VEDLEGG => ArkivEventType::ArkivJobbVedlegg,
             ARKIVJOBB_BILDE_JOURNALPOST => ArkivEventType::ArkivJobbBilderJournalpost,
             ARKIVJOBB_SETT_SAKSANSVARLIG => ArkivEventType::ArkivJobbSettSaksansvarlig,
+            BEKYMRINGSMELDING_AVSLUTTET => ArkivEventType::BekymringsmeldingAvsluttet,
             other_str => ArkivEventType::Unsupported(other_str.to_string()),
         }
     }
