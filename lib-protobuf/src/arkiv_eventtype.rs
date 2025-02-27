@@ -31,7 +31,6 @@ const ARKIVJOBB_SETT_SAKSANSVARLIG: &str =
     "no.mattilsynet.lib-schemas.protos.ArkivJobbSettSaksansvarlig";
 const BEKYMRINGSMELDING_AVSLUTTET: &str = "no.mattilsynet.lib-schemas.protos.Avsluttet";
 
-
 impl EventTypeTrait for ArkivEventType {
     fn as_str(&self) -> &str {
         match self {
