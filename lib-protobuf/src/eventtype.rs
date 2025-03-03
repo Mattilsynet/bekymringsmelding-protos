@@ -15,6 +15,7 @@ pub enum EventType {
     Notat,
     Avsluttet,
     TilOppfolging,
+    UnderOppfolging,
     TilVurdering,
     ManuellVurdering,
     Ansvarlig,
@@ -35,6 +36,7 @@ const BREV_STR: &str = "no.mattilsynet.lib-schemas.protos.Brev";
 const NOTAT_STR: &str = "no.mattilsynet.lib-schemas.protos.Notat";
 const AVSLUTTET_STR: &str = "no.mattilsynet.lib-schemas.protos.Avsluttet";
 const TIL_OPPFOLGING_STR: &str = "no.mattilsynet.lib-schemas.protos.TilOppfolging";
+const UNDER_OPPFOLGING_STR: &str = "no.mattilsynet.lib-schemas.protos.UnderOppfolging";
 const TIL_VURDERING_STR: &str = "no.mattilsynet.lib-schemas.protos.TilVurdering";
 const MANUELL_VURDERING_STR: &str = "no.mattilsynet.lib-schemas.protos.ManuellVurdering";
 const ANSVARLIG_STR: &str = "no.mattilsynet.lib-schemas.protos.Ansvarlig";
@@ -60,6 +62,7 @@ impl EventTypeTrait for EventType {
             EventType::Notat => NOTAT_STR,
             EventType::Avsluttet => AVSLUTTET_STR,
             EventType::TilOppfolging => TIL_OPPFOLGING_STR,
+            EventType::UnderOppfolging => UNDER_OPPFOLGING_STR,
             EventType::TilVurdering => TIL_VURDERING_STR,
             EventType::ManuellVurdering => MANUELL_VURDERING_STR,
             EventType::Ansvarlig => ANSVARLIG_STR,
@@ -85,6 +88,7 @@ impl From<&str> for EventType {
             NOTAT_STR => EventType::Notat,
             AVSLUTTET_STR => EventType::Avsluttet,
             TIL_OPPFOLGING_STR => EventType::TilOppfolging,
+            UNDER_OPPFOLGING_STR => EventType::UnderOppfolging,
             TIL_VURDERING_STR => EventType::TilVurdering,
             MANUELL_VURDERING_STR => EventType::ManuellVurdering,
             ANSVARLIG_STR => EventType::Ansvarlig,
@@ -110,6 +114,7 @@ impl fmt::Display for EventType {
             EventType::Notat => NOTAT_STR,
             EventType::Avsluttet => AVSLUTTET_STR,
             EventType::TilOppfolging => TIL_OPPFOLGING_STR,
+            EventType::UnderOppfolging => UNDER_OPPFOLGING_STR,
             EventType::TilVurdering => TIL_VURDERING_STR,
             EventType::ManuellVurdering => MANUELL_VURDERING_STR,
             EventType::Ansvarlig => ANSVARLIG_STR,
