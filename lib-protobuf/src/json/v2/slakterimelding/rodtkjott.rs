@@ -29,7 +29,7 @@ pub struct Rodtkjott {
 impl From<Rodtkjott> for protobuf::v2::rodtkjott::Rodtkjott {
     fn from(value: Rodtkjott) -> Self {
         protobuf::v2::rodtkjott::Rodtkjott {
-            avsender: value.avsender.map(|a| Ansatt::from(a)),
+            avsender: value.avsender.map(Ansatt::from),
             begrunnelse_for_bekymring: value.begrunnelse,
             funn: value
                 .funn
