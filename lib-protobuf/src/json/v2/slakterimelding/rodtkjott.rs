@@ -1,6 +1,5 @@
 use chrono::Utc;
 use serde::{Deserialize, Serialize};
-use uuid::Uuid;
 
 use crate::json::v1::slakterimelding::avsender::Avsender;
 use crate::json::v1::slakterimelding::kategori::Kategori;
@@ -17,7 +16,6 @@ use crate::protobuf::v2::virksomhet::tilsynsobjekt::Tilsynsobjekt as ProtoTilsyn
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct Rodtkjott {
-    pub melding_id: Uuid,
     pub(crate) avsender: Option<Avsender>,
     pub(crate) begrunnelse: String,
     pub(crate) funn: Vec<Option<Funn>>,
