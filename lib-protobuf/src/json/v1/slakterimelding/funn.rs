@@ -7,7 +7,7 @@ use crate::protobuf::v1::rodtkjott::Observasjon as ProtoObservasjon;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "camelCase")]
-pub(crate) struct Funn {
+pub struct Funn {
     pub eftanummer: String,
     pub funn_id: String,
     pub observasjoner: Option<Vec<Observasjon>>,
@@ -19,14 +19,14 @@ pub(crate) struct Funn {
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "camelCase")]
-pub(crate) struct Observasjon {
+pub struct Observasjon {
     beskrivelse: Option<String>,
     bilde_ids: Option<Vec<String>>,
     diagnose: Option<Kode>,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
-pub(crate) struct Kode {
+pub struct Kode {
     #[serde(rename = "type")]
     kode_type: String,
     kode: String,
@@ -35,7 +35,7 @@ pub(crate) struct Kode {
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "SCREAMING_SNAKE_CASE")]
-pub(crate) enum Type {
+pub enum Type {
     Am,
     Pm,
 }

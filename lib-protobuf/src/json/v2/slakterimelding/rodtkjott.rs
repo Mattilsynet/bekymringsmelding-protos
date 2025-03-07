@@ -16,12 +16,12 @@ use crate::protobuf::v2::virksomhet::tilsynsobjekt::Tilsynsobjekt as ProtoTilsyn
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct Rodtkjott {
-    pub(crate) avsender: Option<Avsender>,
-    pub(crate) begrunnelse: String,
-    pub(crate) funn: Vec<Option<Funn>>,
-    pub(crate) kategorier: Vec<Kategori>,
-    pub(crate) slakteri: Option<Slakteri>,
-    pub(crate) tilsynsobjekt: Option<Tilsynsobjekt>,
+    pub avsender: Option<Avsender>,
+    pub begrunnelse: String,
+    pub funn: Vec<Option<Funn>>,
+    pub kategorier: Vec<Kategori>,
+    pub slakteri: Option<Slakteri>,
+    pub tilsynsobjekt: Option<Tilsynsobjekt>,
 }
 
 impl From<Rodtkjott> for protobuf::v2::rodtkjott::Rodtkjott {

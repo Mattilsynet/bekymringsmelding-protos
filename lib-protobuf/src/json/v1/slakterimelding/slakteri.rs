@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 use crate::protobuf;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
-pub(crate) struct Slakteri {
+pub struct Slakteri {
     pub eftanummer: u32,
     pub navn: String,
 }

@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 use crate::protobuf;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
-pub(crate) struct Avsender {
+pub struct Avsender {
     #[serde(rename(deserialize = "avdelingId"))]
     pub avdeling_id: Option<String>,
     pub brukernavn: String,

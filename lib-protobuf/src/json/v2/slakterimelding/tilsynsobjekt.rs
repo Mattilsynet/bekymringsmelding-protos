@@ -6,7 +6,7 @@ use crate::protobuf::v2::virksomhet::tilsynsobjekt::{
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "camelCase")]
-pub(crate) struct Tilsynsobjekt {
+pub struct Tilsynsobjekt {
     pub aktivitet_id: Option<String>,
     pub adresse: Adresse,
     pub mt_enhet: String,
@@ -20,7 +20,7 @@ pub(crate) struct Tilsynsobjekt {
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
-pub(crate) struct Adresse {
+pub struct Adresse {
     pub gateadresse: Option<String>,
     #[serde(rename(deserialize = "postNr"))]
     pub post_nr: Option<String>,

@@ -4,7 +4,7 @@ use crate::protobuf;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "SCREAMING_SNAKE_CASE")]
-pub(crate) enum Kategori {
+pub enum Kategori {
     Dyrevelferd,
     MerkeavvikDyr,
 }
