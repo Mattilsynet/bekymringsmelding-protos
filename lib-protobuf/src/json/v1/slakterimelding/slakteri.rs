@@ -4,7 +4,7 @@ use crate::protobuf;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Slakteri {
-    pub eftanummer: String,
+    pub eftanummer: u32,
     pub navn: String,
 }
 
