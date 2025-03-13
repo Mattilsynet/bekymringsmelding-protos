@@ -20,6 +20,6 @@ message Rodtkjott {
   repeated Kategori kategorier = 4;
   optional v1.virksomhet.slakteri.Slakteri slakteri = 6;
   v2.virksomhet.tilsynsobjekt.Tilsynsobjekt tilsynsobjekt = 7;
-  string innsendt = 13; //Timestamp, UTC
+  string innsendt = 8; //Timestamp, UTC
 }
 
