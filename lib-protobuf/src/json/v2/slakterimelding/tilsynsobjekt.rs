@@ -37,6 +37,7 @@ impl From<Tilsynsobjekt> for ProtoTilsynsobjekt {
             tilsynsobjekt_id: value.tilsynsobjekt_id,
             tilsynsobjekt_navn: value.navn,
             virksomhetsnavn: value.virksomhetsnavn,
+            aktivitet_id: value.aktivitet_id.unwrap_or_default(),
         }
     }
 }
