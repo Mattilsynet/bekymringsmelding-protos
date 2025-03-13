@@ -10,6 +10,7 @@ message Tilsynsobjekt {
   string tilsynsobjekt_id = 5;
   optional string tilsynsobjekt_navn = 6;
   optional string virksomhetsnavn = 7;
+  string aktivitet_id = 8;
 }
 
 message Adresse {
