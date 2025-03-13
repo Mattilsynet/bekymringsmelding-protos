@@ -8,7 +8,8 @@ use crate::protobuf::v2::rodtkjott::Funn as ProtoFunn;
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct Funn {
-    pub eftanummer: String,
+    pub eftanummer: String, //Fra rodtkjott melding: Dette er samme efta som i slakteiobjekt.
+    //Ignoreres og brukes ikke videre i interne typer.
     pub observasjoner: Option<Vec<Observasjon>>,
     #[serde(rename = "type")]
     funn_type: Type,
