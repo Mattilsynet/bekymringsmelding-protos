@@ -3,8 +3,8 @@ use serde::{Deserialize, Serialize};
 
 use crate::json::v1::slakterimelding::avsender::Avsender;
 use crate::json::v1::slakterimelding::kategori::Kategori;
-use crate::json::v1::slakterimelding::slakteri::Slakteri;
 use crate::json::v2::slakterimelding::funn::Funn;
+use crate::json::v2::slakterimelding::slakteri::Slakteri;
 use crate::json::v2::slakterimelding::tilsynsobjekt::Tilsynsobjekt;
 use crate::protobuf;
 use crate::protobuf::v1::person::ansatt::Ansatt;
