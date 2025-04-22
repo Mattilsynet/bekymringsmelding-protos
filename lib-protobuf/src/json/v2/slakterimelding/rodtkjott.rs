@@ -23,7 +23,7 @@ pub struct Rodtkjott {
     pub funn: Vec<Option<Funn>>,
     pub kategorier: Vec<Kategori>,
     pub slakteri: Option<Slakteri>,
-    pub tilsynsobjekt: Option<Tilsynsobjekt>,
+    pub tilsynsobjekt: Tilsynsobjekt,
 }
 
 impl From<Rodtkjott> for protobuf::v2::rodtkjott::Rodtkjott {
@@ -45,7 +45,7 @@ impl From<Rodtkjott> for protobuf::v2::rodtkjott::Rodtkjott {
                 })
                 .collect(),
             slakteri: value.slakteri.map(ProtoSlakteri::from),
-            tilsynsobjekt: value.tilsynsobjekt.map(ProtoTilsynsobjekt::from),
+            tilsynsobjekt: Some(ProtoTilsynsobjekt::from(value.tilsynsobjekt)),
             innsendt: Utc::now().to_string(),
         }
     }
