@@ -7,7 +7,7 @@ use crate::protobuf::v2::virksomhet::tilsynsobjekt::{
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct Tilsynsobjekt {
-    pub aktivitet_id: Option<String>,
+    pub aktivitet_id: String,
     pub adresse: Adresse,
     pub mt_enhet: String,
     pub navn: Option<String>,
@@ -37,7 +37,7 @@ impl From<Tilsynsobjekt> for ProtoTilsynsobjekt {
             tilsynsobjekt_id: value.tilsynsobjekt_id,
             tilsynsobjekt_navn: value.navn,
             virksomhetsnavn: value.virksomhetsnavn,
-            aktivitet_id: value.aktivitet_id.unwrap_or_default(),
+            aktivitet_id: value.aktivitet_id,
         }
     }
 }
