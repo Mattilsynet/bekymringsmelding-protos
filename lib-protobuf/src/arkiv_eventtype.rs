@@ -3,8 +3,6 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, PartialEq, Deserialize, Serialize, Clone)]
 pub enum ArkivEventType {
-    RodtkjottAnkommet,
-    RodtkjottAvsluttet,
     ArkivJobbAvsluttetDokument,
     ArkivJobbAvsluttSak,
     ArkivJobbJournalfoer,
@@ -17,8 +15,6 @@ pub enum ArkivEventType {
     BekymringsmeldingAvsluttet,
 }
 
-const RODKJOTT_ANKOMMET: &str = "no.mattilsynet.lib-schemas.protos.Rodtkjott.Ankommet";
-const RODKJOTT_AVSLUTTET: &str = "no.mattilsynet.lib-schemas.protos.Avsluttet";
 const ARKIVJOBB_AVSLUTTET_DOKUMENT: &str =
     "no.mattilsynet.lib-schemas.protos.ArkivJobbAvsluttetDokument";
 const ARKIVJOBB_AVSLUTT_SAK: &str = "no.mattilsynet.lib-schemas.protos.ArkivJobbAvsluttSak";
@@ -35,8 +31,6 @@ const BEKYMRINGSMELDING_AVSLUTTET: &str = "no.mattilsynet.lib-schemas.protos.Avs
 impl EventTypeTrait for ArkivEventType {
     fn as_str(&self) -> &str {
         match self {
-            ArkivEventType::RodtkjottAnkommet => RODKJOTT_ANKOMMET,
-            ArkivEventType::RodtkjottAvsluttet => RODKJOTT_AVSLUTTET,
             ArkivEventType::ArkivJobbAvsluttetDokument => ARKIVJOBB_AVSLUTTET_DOKUMENT,
             ArkivEventType::ArkivJobbDokument => ARKIVJOBB_DOKUMENT,
             ArkivEventType::ArkivJobbVedlegg => ARKIVJOBB_VEDLEGG,
@@ -54,8 +48,6 @@ impl EventTypeTrait for ArkivEventType {
 impl From<&str> for ArkivEventType {
     fn from(event_ty: &str) -> Self {
         match event_ty {
-            RODKJOTT_ANKOMMET => ArkivEventType::RodtkjottAnkommet,
-            RODKJOTT_AVSLUTTET => ArkivEventType::RodtkjottAvsluttet,
             ARKIVJOBB_AVSLUTTET_DOKUMENT => ArkivEventType::ArkivJobbAvsluttetDokument,
             ARKIVJOBB_AVSLUTT_SAK => ArkivEventType::ArkivJobbAvsluttSak,
             ARKIVJOBB_JOURNALFOER => ArkivEventType::ArkivJobbJournalfoer,
