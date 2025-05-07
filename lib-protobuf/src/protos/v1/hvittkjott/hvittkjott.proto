@@ -1,16 +1,19 @@
 syntax = "proto3";
 
-package v1.hvittkjott;
+package v1.hvittkjott.hvittkjott;
 
 import "protos/v1/person/ansatt.proto";
+import "protos/v1/hvittkjott/leveranse.proto";
 import "protos/v1/virksomhet/slakteri.proto";
 import "protos/v2/virksomhet/tilsynsobjekt.proto";
 
 
 message Hvittkjott {
-  optional v1.person.ansatt.Ansatt avsender = 1;
+  v1.person.ansatt.Ansatt avsender = 1;
   string begrunnelse_for_bekymring = 2;
-  optional v1.virksomhet.slakteri.Slakteri slakteri = 3;
-  v2.virksomhet.tilsynsobjekt.Tilsynsobjekt tilsynsobjekt = 4;
+  v1.hvittkjott.leveranse.Leveranse leveranse = 3;
+  v1.virksomhet.slakteri.Slakteri slakteri = 4;
+  v2.virksomhet.tilsynsobjekt.Tilsynsobjekt tilsynsobjekt = 5;
+  string innsendt = 8; //Timestamp, UTC
 }
 

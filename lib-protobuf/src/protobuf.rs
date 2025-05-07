@@ -28,6 +28,16 @@ pub mod v1 {
         include!(concat!(env!("OUT_DIR"), "/v1.rodtkjott.rs"));
     }
 
+    pub mod hvittkjott {
+        pub mod hvittkott {
+            include!(concat!(env!("OUT_DIR"), "/v1.hvittkjott.hvittkjott.rs"));
+        }
+
+        pub mod leveranse {
+            include!(concat!(env!("OUT_DIR"), "/v1.hvittkjott.leveranse.rs"));
+        }
+    }
+
     pub mod publikum {
         include!(concat!(env!("OUT_DIR"), "/v1.publikum.rs"));
     }

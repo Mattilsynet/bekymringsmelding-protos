@@ -9,6 +9,8 @@ fn main() -> Result<()> {
             "src/protos/v1/identifisering/maskin_identifisering.proto",
             "src/protos/v1/identifisering/manuell_identifisering.proto",
             "src/protos/v1/identifisering/behandlende_enhet.proto",
+            "src/protos/v1/hvittkjott/hvittkjott.proto",
+            "src/protos/v1/hvittkjott/leveranse.proto",
             "src/protos/v1/rodtkjott/rodtkjott.proto",
             "src/protos/v1/rodtkjott/observasjon.proto",
             "src/protos/v1/rodtkjott/funn.proto",

@@ -1,6 +1,8 @@
 pub mod avsender;
 pub mod funn;
+pub mod hvittkjott;
 pub mod kategori;
+pub mod leveranse;
 pub mod rodtkjott;
 pub mod slakteri;
 pub mod tilsynsobjekt;
