@@ -4,7 +4,7 @@ package v1.hvittkjott.leveranse;
 
 message Leveranse {
   string leveranse_id = 1;
-  string produksjon_type = 2;
+  string produksjonstype = 2;
   string hybrid = 3;
 }
 
