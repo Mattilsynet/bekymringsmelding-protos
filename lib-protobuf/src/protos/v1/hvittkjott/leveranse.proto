@@ -6,5 +6,6 @@ message Leveranse {
   string leveranse_id = 1;
   string produksjonstype = 2;
   string hybrid = 3;
+  repeated string bilde_ider = 4;
 }
 

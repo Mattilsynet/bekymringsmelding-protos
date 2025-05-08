@@ -7,6 +7,7 @@ pub struct Leveranse {
     pub leveranse_id: String,
     pub produksjonstype: String,
     pub hybrid: String,
+    pub bilde_ider: Option<Vec<String>>,
 }
 
 impl From<Leveranse> for protoLeveranse {
@@ -15,6 +16,7 @@ impl From<Leveranse> for protoLeveranse {
             leveranse_id: value.leveranse_id,
             produksjonstype: value.produksjonstype,
             hybrid: value.hybrid,
+            bilde_ider: value.bilde_ider.unwrap_or_default(),
         }
     }
 }
