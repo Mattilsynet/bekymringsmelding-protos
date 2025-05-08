@@ -4,6 +4,7 @@ use std::fmt;
 #[derive(Debug, PartialEq, Deserialize, Serialize, Clone)]
 pub enum EventType {
     Rodtkjott,
+    Hvittkjott,
     RodtkjottVurdering,
     MaskinIdentifisering,
     ManuellIdentifisering,
@@ -25,6 +26,7 @@ pub enum EventType {
 }
 
 const RODTKJOTT_STR: &str = "no.mattilsynet.lib-schemas.protos.Rodtkjott";
+const HVITTKJOTT_STR: &str = "no.mattilsynet.lib-schemas.protos.Hvittkjott";
 const RODTKJOTT_VURDERING_STR: &str = "no.mattilsynet.lib-schemas.protos.Vurdering";
 const MASKIN_IDENTIFISERING_STR: &str = "no.mattilsynet.lib-schemas.protos.MaskinIdentifisering";
 const MANUELL_IDENTIFISERING_STR: &str = "no.mattilsynet.lib-schemas.protos.ManuellIdentifisering";
@@ -51,6 +53,7 @@ impl EventTypeTrait for EventType {
     fn as_str(&self) -> &str {
         match self {
             EventType::Rodtkjott => RODTKJOTT_STR,
+            EventType::Hvittkjott => HVITTKJOTT_STR,
             EventType::RodtkjottVurdering => RODTKJOTT_VURDERING_STR,
             EventType::MaskinIdentifisering => MASKIN_IDENTIFISERING_STR,
             EventType::ManuellIdentifisering => MANUELL_IDENTIFISERING_STR,
@@ -77,6 +80,7 @@ impl From<&str> for EventType {
     fn from(event_ty: &str) -> Self {
         match event_ty {
             RODTKJOTT_STR => EventType::Rodtkjott,
+            HVITTKJOTT_STR => EventType::Hvittkjott,
             RODTKJOTT_VURDERING_STR => EventType::RodtkjottVurdering,
             MASKIN_IDENTIFISERING_STR => EventType::MaskinIdentifisering,
             MANUELL_IDENTIFISERING_STR => EventType::ManuellIdentifisering,
@@ -103,6 +107,7 @@ impl fmt::Display for EventType {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         let event_type_str = match self {
             EventType::Rodtkjott => RODTKJOTT_STR,
+            EventType::Hvittkjott => HVITTKJOTT_STR,
             EventType::RodtkjottVurdering => RODTKJOTT_VURDERING_STR,
             EventType::MaskinIdentifisering => MASKIN_IDENTIFISERING_STR,
             EventType::ManuellIdentifisering => MANUELL_IDENTIFISERING_STR,
