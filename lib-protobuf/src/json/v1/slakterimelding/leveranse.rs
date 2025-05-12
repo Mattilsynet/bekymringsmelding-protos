@@ -6,7 +6,7 @@ use serde::{Deserialize, Serialize};
 pub struct Leveranse {
     pub leveranse_id: String,
     pub produksjonstype: String,
-    pub hybrid: String,
+    pub hybrid: Option<String>,
     pub bilde_ider: Option<Vec<String>>,
 }
 
