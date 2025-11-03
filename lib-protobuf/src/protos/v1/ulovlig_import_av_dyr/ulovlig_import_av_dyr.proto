@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+package v1.ulovlig_import_av_dyr;
+
+enum Dyr {
+  ANDRE_DYR = 0;
+  FUGL = 1;
+  GEIT = 2;
+  GRIS = 3;
+  HEST = 4;
+  HUND = 5;
+  KANIN = 6;
+  KATT = 7;
+  REPTILER = 8;
+  SAU = 9;
+  GNAGERE = 10;
+  STORFE = 11;
+}
+
+enum Yrke {
+  ANNET = 0;
+  LANDBRUK = 1;
+  VETERINAER = 2;
+  POLITI = 3;
+  HELSEPERSONELL = 4;
+  SERVICE = 5;
+  VIL_IKKE_OPPGI = 6;
+}
+
+enum KjennskapTilHendelse {
+  OBSERVERT_SELV = 0;
+  FRA_ANDRE = 1;
+}
+
+enum Observasjonsfrekvens {
+  SETT_EN_GANG = 0;
+  SETT_FLERE_GANGER = 1;
+}
+
+message Dyreeier {
+  string fornavn = 1;
+  string etternavn = 2;
+  string adresse = 3;
+  string postnummer = 4;
+  optional string poststed = 5;
+}
+
+message Bekymring {
+  Dyr valgt_dyr = 1;
+  string antall = 2;
+  string beskrivelse = 3;
+  repeated string dokumentasjon = 4;
+  optional string andre_dyrearter_beskrivelse = 5;
+}
+
+message Innsender {
+  optional string epost = 1;
+  optional string navn = 2;
+  optional string telefon = 3;
+}
+
+message Publikumsmelding {
+  Dyreeier dyreeier = 1;
+  bool kan_kontaktes = 2;
+  repeated Bekymring bekymringer = 3;
+  KjennskapTilHendelse kjennskap_til_hendelsen = 4;
+  optional Observasjonsfrekvens observasjonsfrekvens = 5;
+  optional Innsender innsender = 6;
+  optional Yrke yrke = 7;
+  string dato = 8;
+}
