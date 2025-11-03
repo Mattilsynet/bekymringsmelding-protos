@@ -59,7 +59,7 @@ message Innsender {
   optional string telefon = 3;
 }
 
-message Publikumsmelding {
+message UlovligImportMelding {
   Dyreeier dyreeier = 1;
   bool kan_kontaktes = 2;
   repeated Bekymring bekymringer = 3;
