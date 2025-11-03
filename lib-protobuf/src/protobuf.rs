@@ -42,6 +42,10 @@ pub mod v1 {
         include!(concat!(env!("OUT_DIR"), "/v1.publikum.rs"));
     }
 
+    pub mod ulovlig_import_av_dyr {
+        include!(concat!(env!("OUT_DIR"), "/v1.ulovlig_import_av_dyr.rs"));
+    }
+
     pub mod identifisering {
 
         pub mod identifisering {
@@ -113,5 +117,9 @@ pub mod v2 {
 
     pub mod rodtkjott {
         include!(concat!(env!("OUT_DIR"), "/v2.rodtkjott.rs"));
+    }
+
+    pub mod publikum {
+        include!(concat!(env!("OUT_DIR"), "/v2.publikum.rs"));
     }
 }

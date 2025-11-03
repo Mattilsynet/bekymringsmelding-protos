@@ -20,6 +20,7 @@ fn main() -> Result<()> {
             "src/protos/v1/virksomhet/slakteri.proto",
             "src/protos/v1/virksomhet/organisasjon.proto",
             "src/protos/v1/publikum/publikum.proto",
+            "src/protos/v1/ulovlig_import_av_dyr/ulovlig_import_av_dyr.proto",
             "src/protos/v1/vurdering/maskinvurdering.proto",
             "src/protos/v1/vurdering/manuell_vurdering.proto",
             "src/protos/v1/arkivering/arkivering_status.proto",
@@ -27,6 +28,7 @@ fn main() -> Result<()> {
             "src/protos/v2/virksomhet/tilsynsobjekt.proto",
             "src/protos/v2/rodtkjott/funn.proto",
             "src/protos/v2/rodtkjott/rodtkjott.proto",
+            "src/protos/v2/publikum/publikum.proto",
         ],
         &["src/"],
     )?;
