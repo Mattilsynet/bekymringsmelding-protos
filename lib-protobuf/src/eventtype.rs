@@ -5,6 +5,7 @@ use std::fmt;
 pub enum EventType {
     Rodtkjott,
     Hvittkjott,
+    UlovligImportAvDyr,
     RodtkjottVurdering,
     MaskinIdentifisering,
     ManuellIdentifisering,
@@ -27,6 +28,7 @@ pub enum EventType {
 
 const RODTKJOTT_STR: &str = "no.mattilsynet.lib-schemas.protos.Rodtkjott";
 const HVITTKJOTT_STR: &str = "no.mattilsynet.lib-schemas.protos.Hvittkjott";
+const ULOVLIG_IMPORT_AV_DYR_STR: &str = "no.mattilsynet.lib-schemas.protos.UlovligImportAvDyr";
 const RODTKJOTT_VURDERING_STR: &str = "no.mattilsynet.lib-schemas.protos.Vurdering";
 const MASKIN_IDENTIFISERING_STR: &str = "no.mattilsynet.lib-schemas.protos.MaskinIdentifisering";
 const MANUELL_IDENTIFISERING_STR: &str = "no.mattilsynet.lib-schemas.protos.ManuellIdentifisering";
@@ -54,6 +56,7 @@ impl EventTypeTrait for EventType {
         match self {
             EventType::Rodtkjott => RODTKJOTT_STR,
             EventType::Hvittkjott => HVITTKJOTT_STR,
+            EventType::UlovligImportAvDyr => ULOVLIG_IMPORT_AV_DYR_STR,
             EventType::RodtkjottVurdering => RODTKJOTT_VURDERING_STR,
             EventType::MaskinIdentifisering => MASKIN_IDENTIFISERING_STR,
             EventType::ManuellIdentifisering => MANUELL_IDENTIFISERING_STR,
@@ -108,6 +111,7 @@ impl fmt::Display for EventType {
         let event_type_str = match self {
             EventType::Rodtkjott => RODTKJOTT_STR,
             EventType::Hvittkjott => HVITTKJOTT_STR,
+            EventType::UlovligImportAvDyr => ULOVLIG_IMPORT_AV_DYR_STR,
             EventType::RodtkjottVurdering => RODTKJOTT_VURDERING_STR,
             EventType::MaskinIdentifisering => MASKIN_IDENTIFISERING_STR,
             EventType::ManuellIdentifisering => MANUELL_IDENTIFISERING_STR,

@@ -1,9 +1,9 @@
 use serde::{Deserialize, Serialize};
 
-use crate::protobuf::v1::rodtkjott::funn::Type as ProtoType;
-use crate::protobuf::v1::rodtkjott::observasjon::Diagnose as ProtoDiagnose;
 use crate::protobuf::v1::rodtkjott::Funn as ProtoFunn;
 use crate::protobuf::v1::rodtkjott::Observasjon as ProtoObservasjon;
+use crate::protobuf::v1::rodtkjott::funn::Type as ProtoType;
+use crate::protobuf::v1::rodtkjott::observasjon::Diagnose as ProtoDiagnose;
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(rename_all = "camelCase")]
