@@ -1,17 +1,17 @@
 [package]
 name = "lib-protobuf"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-prost = { version = "0.13.5", features = ["prost-derive"] }
-bytes = "^1.10.0"
-serde = { version = "1.0.218", features = ["derive"] }
-chrono = { version = "0.4.39", features = ["serde"] }
-uuid = { version = "1.14.0", features = ["serde"] }
+prost = { version = "0.14.1", features = ["derive"] }
+bytes = "^1.10.1"
+serde = { version = "1.0.228", features = ["derive"] }
+chrono = { version = "0.4.42", features = ["serde"] }
+uuid = { version = "1.18.1", features = ["serde"] }
 
 [build-dependencies]
-prost-build = "0.13.5"
+prost-build = "0.14.1"
 
