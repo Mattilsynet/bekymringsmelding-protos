@@ -25,16 +25,9 @@ enum Yrke {
   HELSEPERSONELL = 4;
   SERVICE = 5;
   VIL_IKKE_OPPGI = 6;
-}
-
-enum KjennskapTilHendelse {
-  OBSERVERT_SELV = 0;
-  FRA_ANDRE = 1;
-}
-
-enum Observasjonsfrekvens {
-  SETT_EN_GANG = 0;
-  SETT_FLERE_GANGER = 1;
+  TRANSPORT = 7;
+  OFFENTLIG_ANSATT = 8;
+  NEI = 9;
 }
 
 message Dyreeier {
@@ -65,9 +58,7 @@ message UlovligImportMelding {
   Dyreeier dyreeier = 1;
   bool kan_kontaktes = 2;
   repeated Bekymring bekymringer = 3;
-  KjennskapTilHendelse kjennskap_til_hendelsen = 4;
-  optional Observasjonsfrekvens observasjonsfrekvens = 5;
-  optional Innsender innsender = 6;
-  optional Yrke yrke = 7;
-  string dato = 8;
+  optional Innsender innsender = 4;
+  optional Yrke yrke = 5;
+  string dato = 6;
 }
