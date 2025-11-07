@@ -28,7 +28,7 @@ pub enum EventType {
 
 const RODTKJOTT_STR: &str = "no.mattilsynet.lib-schemas.protos.Rodtkjott";
 const HVITTKJOTT_STR: &str = "no.mattilsynet.lib-schemas.protos.Hvittkjott";
-const ULOVLIG_IMPORT_AV_DYR_STR: &str = "no.mattilsynet.lib-schemas.protos.UlovligImportAvDyr";
+const ULOVLIG_IMPORT_AV_DYR_STR: &str = "no.mattilsynet.lib-schemas.protos.UlovligImport";
 const RODTKJOTT_VURDERING_STR: &str = "no.mattilsynet.lib-schemas.protos.Vurdering";
 const MASKIN_IDENTIFISERING_STR: &str = "no.mattilsynet.lib-schemas.protos.MaskinIdentifisering";
 const MANUELL_IDENTIFISERING_STR: &str = "no.mattilsynet.lib-schemas.protos.ManuellIdentifisering";
