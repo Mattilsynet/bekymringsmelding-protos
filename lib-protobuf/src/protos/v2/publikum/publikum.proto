@@ -18,13 +18,14 @@ enum Dyr {
 }
 
 enum Yrke {
-  LANDBRUK = 0;
-  VETERINAER = 1;
-  POLITI = 2;
-  HELSEPERSONELL = 3;
-  SERVICE = 4;
-  TRANSPORT = 5;
-  NEI = 6;
+  ANNET = 0;
+  LANDBRUK = 1;
+  VETERINAER = 2;
+  POLITI = 3;
+  HELSEPERSONELL = 4;
+  SERVICE = 5;
+  TRANSPORT = 6;
+  NEI = 7;
 }
 
 enum KjennskapTilHendelse {
