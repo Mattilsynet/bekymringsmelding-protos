@@ -30,11 +30,12 @@ enum Yrke {
   NEI = 9;
 }
 
+//TODO: Kanskje benytte oneof på adresse og punkt istedenfor bare optional felter
 message Dyreeier {
   optional string fornavn = 1;
   optional string etternavn = 2;
-  string adresse = 3;
-  string postnummer = 4;
+  optional string adresse = 3;
+  optional string postnummer = 4;
   optional string poststed = 5;
   optional string longitude = 6;
   optional string latitude = 7;
