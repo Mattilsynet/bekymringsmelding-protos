@@ -101,6 +101,7 @@ impl From<&str> for EventType {
             ANSVARLIG_STR => EventType::Ansvarlig,
             ARKIVERING_STR => EventType::Arkivering,
             PUBLIKUM_STR => EventType::Publikum,
+            ULOVLIG_IMPORT_AV_DYR_STR => EventType::UlovligImportAvDyr,
             other => EventType::Unsupported(other.to_string()),
         }
     }
