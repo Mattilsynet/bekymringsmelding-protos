@@ -26,7 +26,7 @@ enum Yrke {
   SERVICE = 5;
   VIL_IKKE_OPPGI = 6;
   TRANSPORT = 7;
-  NEI = 8
+  NEI = 8;
 }
 
 enum KjennskapTilHendelse {
