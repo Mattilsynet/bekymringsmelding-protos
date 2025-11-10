@@ -25,6 +25,8 @@ enum Yrke {
   HELSEPERSONELL = 4;
   SERVICE = 5;
   VIL_IKKE_OPPGI = 6;
+  TRANSPORT = 7;
+  NEI = 8
 }
 
 enum KjennskapTilHendelse {
