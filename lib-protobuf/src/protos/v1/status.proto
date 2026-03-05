@@ -36,3 +36,8 @@ message UnderOppfolging {
   string timestamp = 1;
   string utfort_av = 2;
 }
+
+message Slettet {
+  string timestamp = 1;
+  string utfort_av = 2;
+}

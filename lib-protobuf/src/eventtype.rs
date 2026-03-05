@@ -19,6 +19,7 @@ pub enum EventType {
     TilOppfolging,
     UnderOppfolging,
     TilVurdering,
+    Slettet,
     ManuellVurdering,
     Ansvarlig,
     Arkivering,
@@ -42,6 +43,7 @@ const AVSLUTTET_STR: &str = "no.mattilsynet.lib-schemas.protos.Avsluttet";
 const TIL_OPPFOLGING_STR: &str = "no.mattilsynet.lib-schemas.protos.TilOppfolging";
 const UNDER_OPPFOLGING_STR: &str = "no.mattilsynet.lib-schemas.protos.UnderOppfolging";
 const TIL_VURDERING_STR: &str = "no.mattilsynet.lib-schemas.protos.TilVurdering";
+const SLETTET_STR: &str = "no.mattilsynet.lib-schemas.protos.Slettet";
 const MANUELL_VURDERING_STR: &str = "no.mattilsynet.lib-schemas.protos.ManuellVurdering";
 const ANSVARLIG_STR: &str = "no.mattilsynet.lib-schemas.protos.Ansvarlig";
 const ARKIVERING_STR: &str = "no.mattilsynet.lib-schemas.protos.Arkivering";
@@ -70,6 +72,7 @@ impl EventTypeTrait for EventType {
             EventType::TilOppfolging => TIL_OPPFOLGING_STR,
             EventType::UnderOppfolging => UNDER_OPPFOLGING_STR,
             EventType::TilVurdering => TIL_VURDERING_STR,
+            EventType::Slettet => SLETTET_STR,
             EventType::ManuellVurdering => MANUELL_VURDERING_STR,
             EventType::Ansvarlig => ANSVARLIG_STR,
             EventType::Arkivering => ARKIVERING_STR,
@@ -126,6 +129,7 @@ impl fmt::Display for EventType {
             EventType::TilOppfolging => TIL_OPPFOLGING_STR,
             EventType::UnderOppfolging => UNDER_OPPFOLGING_STR,
             EventType::TilVurdering => TIL_VURDERING_STR,
+            EventType::Slettet => SLETTET_STR,
             EventType::ManuellVurdering => MANUELL_VURDERING_STR,
             EventType::Ansvarlig => ANSVARLIG_STR,
             EventType::Arkivering => ARKIVERING_STR,
