@@ -97,6 +97,7 @@ impl From<&str> for EventType {
             BREV_STR => EventType::Brev,
             NOTAT_STR => EventType::Notat,
             AVSLUTTET_STR => EventType::Avsluttet,
+            SLETTET_STR => EventType::Slettet,
             TIL_OPPFOLGING_STR => EventType::TilOppfolging,
             UNDER_OPPFOLGING_STR => EventType::UnderOppfolging,
             TIL_VURDERING_STR => EventType::TilVurdering,
