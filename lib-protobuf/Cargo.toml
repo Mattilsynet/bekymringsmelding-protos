@@ -10,7 +10,7 @@ prost = { version = "0.14.3", features = ["derive"] }
 bytes = "^1.11.1"
 serde = { version = "1.0.228", features = ["derive"] }
 chrono = { version = "0.4.44", features = ["serde"] }
-uuid = { version = "1.21.0", features = ["serde"] }
+uuid = { version = "1.23.1", features = ["serde"] }
 
 [build-dependencies]
 prost-build = "0.14.3"
