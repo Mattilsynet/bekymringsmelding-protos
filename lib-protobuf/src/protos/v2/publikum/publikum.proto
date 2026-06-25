@@ -39,6 +39,22 @@ enum Observasjonsfrekvens {
   SETT_FLERE_GANGER = 1;
 }
 
+message Vegadresse {
+  optional string adresse = 1;
+  optional string postnummer = 2;
+  optional string poststed = 3;
+}
+
+message Koordinat {
+  optional string longitude = 1;
+  optional string latitude = 2;
+}
+
+message Observasjonssted {
+  optional Vegadresse adresse = 1;
+  optional Koordinat punkt = 2;
+}
+
 message Dyreeier {
   optional string fornavn = 1;
   optional string etternavn = 2;
@@ -73,4 +89,5 @@ message Publikumsmelding {
   optional Innsender innsender = 6;
   optional Yrke yrke = 7;
   string dato = 8;
+  optional Observasjonssted observasjonssted = 9;
 }
