@@ -70,6 +70,9 @@ pub mod v1 {
                 "/v1.identifisering.manuell_identifisering.rs"
             ));
         }
+        pub mod koordinat {
+            include!(concat!(env!("OUT_DIR"), "/v1.identifisering.koordinat.rs"));
+        }
     }
 
     pub mod vurdering {

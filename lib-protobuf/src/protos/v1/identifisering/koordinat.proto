@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package v1.identifisering.koordinat;
+
+enum KoordinatGjelder {
+  UNSPECIFIED = 0;
+  INNSENDT_DYREEIER = 1;
+  OBSERVASJONSSTED = 2;
+  VERIFISERT_DYREEIER = 3;
+}
+
+message Koordinat {
+  KoordinatGjelder gjelder = 1;
+  optional double latitude = 2;
+  optional double longitude = 3;
+  string timestamp = 4;
+}

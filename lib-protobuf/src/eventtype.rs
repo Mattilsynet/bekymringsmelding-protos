@@ -24,6 +24,7 @@ pub enum EventType {
     Ansvarlig,
     Arkivering,
     Publikum,
+    Koordinat,
     Unsupported(String),
 }
 
@@ -48,6 +49,7 @@ const MANUELL_VURDERING_STR: &str = "no.mattilsynet.lib-schemas.protos.ManuellVu
 const ANSVARLIG_STR: &str = "no.mattilsynet.lib-schemas.protos.Ansvarlig";
 const ARKIVERING_STR: &str = "no.mattilsynet.lib-schemas.protos.Arkivering";
 const PUBLIKUM_STR: &str = "no.mattilsynet.lib-schemas.protos.Publikum";
+const KOORDINAT_STR: &str = "no.mattilsynet.lib-schemas.protos.Koordinat";
 
 pub trait EventTypeTrait {
     fn as_str(&self) -> &str;
@@ -77,6 +79,7 @@ impl EventTypeTrait for EventType {
             EventType::Ansvarlig => ANSVARLIG_STR,
             EventType::Arkivering => ARKIVERING_STR,
             EventType::Publikum => PUBLIKUM_STR,
+            EventType::Koordinat => KOORDINAT_STR,
             EventType::Unsupported(s) => s,
         }
     }
@@ -106,6 +109,7 @@ impl From<&str> for EventType {
             ARKIVERING_STR => EventType::Arkivering,
             PUBLIKUM_STR => EventType::Publikum,
             ULOVLIG_IMPORT_AV_DYR_STR => EventType::UlovligImportAvDyr,
+            KOORDINAT_STR => EventType::Koordinat,
             other => EventType::Unsupported(other.to_string()),
         }
     }
@@ -135,6 +139,7 @@ impl fmt::Display for EventType {
             EventType::Ansvarlig => ANSVARLIG_STR,
             EventType::Arkivering => ARKIVERING_STR,
             EventType::Publikum => PUBLIKUM_STR,
+            EventType::Koordinat => KOORDINAT_STR,
             EventType::Unsupported(s) => s,
         };
         write!(f, "{}", event_type_str)
